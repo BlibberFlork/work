@@ -1,0 +1,718 @@
+<!DOCTYPE html><html ondragstart="return false" style="z-index: 99999;">
+<title>School</title>
+<body><div class="info" style="position: absolute;text-align: right;line-height: .5%;font-size: 10px;width: 99.4%">
+  
+    <p>CGpt=C</p>
+    <p>Gemini=N</p>
+    <p>Consensus=O</p>
+    <p>Google=G</p>
+    <p>Bing=B</p>
+    <p>VLE=V</p>
+    <p>Trello=T</p>
+    <p>Spotify=M</p>
+    <p>Kahoot=K</p>
+
+    
+  
+  </div>
+
+
+
+
+    
+  <style>
+* {
+  box-sizing: border-box;
+}
+    .info {
+      color: #96ceb4;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
+    }
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+  </style>
+
+
+<div class="prevent-select">
+<div style="position: absolute;top: 0px;height: 100%;width: 100%;">
+  <div class="iconMid">MENU
+    <ul class="menuMid">
+      <li class="spread"><a class="unit" href="https://drive.google.com/drive/u/3/" target="_blank" id="link1"><img src="google-drive-brands-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://www.canva.com/" target="_blank" id="link2"><img src="square-pen-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://www.grammarly.com/" target="_blank" id="link3"><img src="spell-check-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://www.icloud.com" target="_blank" id="link4"><img src="cloud-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://sketch.io/sketchpad/" target="_blank" id="link5"><img src="pencil-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://www.youtube.com" target="_blank" id="link6"><img src="youtube-brands-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://notepad.js.org/" target="_blank" id="link7"><img src="clipboard-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://mail.google.com/mail/u/3/" target="_blank" id="link8"><img src="envelope-solid.svg"></a></li>
+      <li class="spread"><a class="unit" href="https://classroom.google.com/u/3/h" target="_blank" id="link9"><img src="chalkboard-solid.svg""></a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  // Links for each number selection on the wheel
+  const linkMappings = {
+    bubble: [
+      "https://drive.google.com/drive/u/0/",
+      "https://www.canva.com/",
+      "https://www.grammarly.com/",
+      "https://www.icloud.com/",
+      "https://sketch.io/sketchpad/",
+      "https://www.youtube.com",
+      "https://notepad.js.org/",
+      "https://mail.google.com/mail/u/0/",
+      "https://classroom.google.com/u/0/h"
+    ],
+    cloud: [
+      "https://drive.google.com/drive/u/0/",
+      "https://www.canva.com/",
+      "https://www.grammarly.com/",
+      "https://www.icloud.com/",
+      "https://sketch.io/sketchpad/",
+      "https://www.youtube.com",
+      "https://notepad.js.org/",
+      "https://mail.google.com/mail/u/1/",
+      "https://classroom.google.com/u/1/h"
+    ],
+    cog: [
+      "https://drive.google.com/drive/u/2/",
+      "https://www.canva.com/",
+      "https://www.grammarly.com/",
+      "https://www.icloud.com/",
+      "https://sketch.io/sketchpad/",
+      "https://www.youtube.com",
+      "https://notepad.js.org/",
+      "https://mail.google.com/mail/u/2/",
+      "https://classroom.google.com/u/2/h"
+    ],
+    heart: [
+      // Add different sets of links for 'heart' selection
+    ]
+    // Add more mappings for other radio buttons (bubble1, cloud1, etc.)
+  };
+
+    // Function to update the links based on the selected radio button
+  function updateLinks(selectedItemId) {
+    const links = document.querySelectorAll('.menuMid .unit');
+
+      // Retrieve the correct set of links based on the selected item
+    const selectedLinks = linkMappings(selectedItemId);
+
+    if (selectedLinks) {
+      // Loop through the anchor elements and update the href attributes
+      links.forEach((link, index) => {
+        link.href = selectedLinks[index];
+      });
+    }
+  }
+    const selectedLinks = items.linkmappings;
+    document.querySelectorAll('.unit').forEach((link, index) => {
+  link.addEventListener('click', (event) => {
+    window.open(selectedLinks[index], '_blank'); // Open the link in a new tab
+  });
+});
+
+  // Detect selected radio button and update the menu links accordingly
+  function detectSelectedItem() {
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+      item.addEventListener('change', () => {
+        if (item.checked) {
+            
+          // Call the function to update the links
+          updateLinks(item.id);
+        }
+      });
+    });
+  }
+
+  // Initialize
+  detectSelectedItem();
+</script>
+  <style>
+      .unit {
+  cursor: pointer; /* Change cursor to pointer */
+}
+      
+      img {
+  height: 75%;
+  width: 75%;
+    top:12%;
+  position:relative;
+}
+      @import "compass/css3";
+/* [1] */
+/* [2] */
+/* [3] */
+/* [4] */
+/* [5] */
+/* [6] */
+/* Styles: */
+.iconMid {
+  position: relative;
+  background: gray;
+  cursor: pointer;
+  margin: auto;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  text-align: center;
+  font-size: 2.75em;
+  font-weight: bold;
+  transition: 0.24s 0.2s;
+}
+.iconMid:hover {
+  background: rgba(200, 200, 200, 0.75);
+}
+.menuMid {
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 150px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+  z-index: -5;
+}
+.spread {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  transform-origin: 100px 100px;
+  transition: all 0.5s 0.1s;
+}
+.iconMid:hover .menuMid {
+  transition: transform 0.4s 0.08s, z-index 0s 0.5s;
+  transform: scale(1);
+  z-index: 5;
+}
+.iconMid:hover .spread, .icon:hover .unit {
+  transition: all 0.6s;
+  /* Where all the MAGIC happens: */
+}
+.iconMid:hover .spread:nth-child(1) {
+  transition-delay: 0.02s;
+  transform: rotate(85deg);
+}
+.iconMid:hover .spread:nth-child(1) .unit {
+  transition-delay: 0.04s;
+  transform: rotate(635deg);
+}
+.iconMid:hover .spread:nth-child(2) {
+  transition-delay: 0.04s;
+  transform: rotate(125deg);
+}
+.iconMid:hover .spread:nth-child(2) .unit {
+  transition-delay: 0.08s;
+  transform: rotate(595deg);
+}
+.iconMid:hover .spread:nth-child(3) {
+  transition-delay: 0.06s;
+  transform: rotate(165deg);
+}
+.iconMid:hover .spread:nth-child(3) .unit {
+  transition-delay: 0.12s;
+  transform: rotate(555deg);
+}
+.iconMid:hover .spread:nth-child(4) {
+  transition-delay: 0.08s;
+  transform: rotate(205deg);
+}
+.iconMid:hover .spread:nth-child(4) .unit {
+  transition-delay: 0.16s;
+  transform: rotate(515deg);
+}
+.iconMid:hover .spread:nth-child(5) {
+  transition-delay: 0.1s;
+  transform: rotate(245deg);
+}
+.iconMid:hover .spread:nth-child(5) .unit {
+  transition-delay: 0.2s;
+  transform: rotate(475deg);
+}
+.iconMid:hover .spread:nth-child(6) {
+  transition-delay: 0.12s;
+  transform: rotate(285deg);
+}
+.iconMid:hover .spread:nth-child(6) .unit {
+  transition-delay: 0.24s;
+  transform: rotate(435deg);
+}
+.iconMid:hover .spread:nth-child(7) {
+  transition-delay: 0.14s;
+  transform: rotate(325deg);
+}
+.iconMid:hover .spread:nth-child(7) .unit {
+  transition-delay: 0.28s;
+  transform: rotate(395deg);
+}
+.iconMid:hover .spread:nth-child(8) {
+  transition-delay: 0.16s;
+  transform: rotate(365deg);
+}
+.iconMid:hover .spread:nth-child(8) .unit {
+  transition-delay: 0.32s;
+  transform: rotate(355deg);
+}
+.iconMid:hover .spread:nth-child(9) {
+  transition-delay: 0.18s;
+  transform: rotate(405deg);
+}
+.iconMid:hover .spread:nth-child(9) .unit {
+  transition-delay: 0.36s;
+  transform: rotate(315deg);
+}
+/* END .iconMid:hover */
+.unit {
+  position: absolute;
+  background: white;
+  font-size: 60%;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 50px;
+  color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: 0.6s;
+}
+/* Just CodePen layout stuff: */
+body, a, ul, li {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  list-style: none;
+}
+html, body {
+  height: 100%;
+  min-height: 300px;
+}
+body {
+  font-family: sans-serif;
+  background: radial-gradient(rgb(0, 104, 0), rgb(0, 0, 0));
+  transform: translate3d(0, 0, 0);
+}
+.iconMid {
+  top: 50%;
+  margin-top: -75px;
+}
+  </style>
+</div>
+
+
+ <!-- trail -->
+ 
+<canvas></canvas>
+
+<style>
+    html {
+    padding: 0;
+    margin: 0;
+	 overscroll-behavior: none;
+	 overflow: hidden;
+}
+    body {
+    padding: 0;
+    margin: 0;
+	 overscroll-behavior: none;
+	 overflow: hidden;
+}
+
+</style>
+<script>
+    const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext('2d');
+
+// for intro motion
+let mouseMoved = false;
+
+const pointer = {
+    x: .5 * window.innerWidth,
+    y: .5 * window.innerHeight,
+}
+const params = {
+    pointsNumber: 40,
+    widthFactor: .3,
+    mouseThreshold: .6,
+    spring: .4,
+    friction: .5
+};
+
+const trail = new Array(params.pointsNumber);
+for (let i = 0; i < params.pointsNumber; i++) {
+    trail[i] = {
+        x: pointer.x,
+        y: pointer.y,
+        dx: 0,
+        dy: 0,
+    }
+}
+
+window.addEventListener("click", e => {
+    updateMousePosition(e.pageX, e.pageY);
+});
+window.addEventListener("mousemove", e => {
+    mouseMoved = true;
+    updateMousePosition(e.pageX, e.pageY);
+});
+window.addEventListener("touchmove", e => {
+    mouseMoved = true;
+    updateMousePosition(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+});
+
+function updateMousePosition(eX, eY) {
+    pointer.x = eX;
+    pointer.y = eY;
+}
+
+setupCanvas();
+update(0);
+window.addEventListener("resize", setupCanvas);
+
+
+function update(t) {
+
+    // for intro motion
+    if (!mouseMoved) {
+        pointer.x = (.5 + .3 * Math.cos(.002 * t) * (Math.sin(.005 * t))) * window.innerWidth;
+        pointer.y = (.5 + .2 * (Math.cos(.005 * t)) + .1 * Math.cos(.01 * t)) * window.innerHeight;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    trail.forEach((p, pIdx) => {
+        const prev = pIdx === 0 ? pointer : trail[pIdx - 1];
+        const spring = pIdx === 0 ? .4 * params.spring : params.spring;
+        p.dx += (prev.x - p.x) * spring;
+        p.dy += (prev.y - p.y) * spring;
+        p.dx *= params.friction;
+        p.dy *= params.friction;
+        p.x += p.dx;
+        p.y += p.dy;
+    });
+
+    ctx.lineCap = "round";
+	 ctx.beginPath();
+    ctx.moveTo(trail[0].x, trail[0].y);
+
+    for (let i = 1; i < trail.length - 1; i++) {
+        const xc = .5 * (trail[i].x + trail[i + 1].x);
+        const yc = .5 * (trail[i].y + trail[i + 1].y);
+        ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
+        ctx.lineWidth = params.widthFactor * (params.pointsNumber - i);
+        ctx.stroke();
+    }
+    ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
+    ctx.stroke();
+    
+    window.requestAnimationFrame(update);
+}
+
+function setupCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+</script>
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.addEventListener("keypress", function(Bing) {
+  if (event.key === "b" || event.key === "B") {
+    window.open("https://www.bing.com/", "_blank");
+  }
+});
+document.addEventListener("keypress", function(Google) {
+  if (Google.key === "g" || Google.key === "G") {
+    window.open("https://www.google.com/", "_blank");
+  }
+});
+  document.addEventListener("keypress", function(consensus) {
+  if (consensus.key === "o" || consensus.key === "O") {
+    window.open("https://consensus.app/", "_blank");
+  }
+});
+document.addEventListener("keypress", function(gpt) {
+  if (gpt.key === "c" || gpt.key === "C") {
+    window.open("https://chat.openai.com/", "_blank");
+  }
+});
+document.addEventListener("keypress", function(map) {
+  if (map.key === "t" || map.key === "T") {
+    window.open("https://trello.com/", "_blank");
+  }
+});
+document.addEventListener("keypress", function(map) {
+  if (map.key === "n" || map.key === "N") {
+    window.open("https://gemini.google.com/app", "_blank");
+  }
+});
+document.addEventListener("keypress", function(map) {
+  if (map.key === "m" || map.key === "M") {
+    window.open("https://open.spotify.com", "_blank");
+  }
+});
+document.addEventListener("keypress", function(map) {
+  if (map.key === "k" || map.key === "K") {
+    window.open("https://kahoot.it", "_blank");
+  }
+});
+    document.addEventListener("keypress", function(map) {
+  if (map.key === "v" || map.key === "V") {
+    window.open("https://www.google.com/url?q=https%3A%2F%2Fmyapps.microsoft.com%2Fsignin%2FVIRTUAL%2520LEARNING%2520ENVIRONMENT%2F61c4a5a6-0f0a-40f6-a216-3e7a38f96f6d%3FtenantId%3D7e057f99-e4f8-4fb5-9966-be33a4b67edf&sa=D&sntz=1&usg=AOvVaw2jfiEdtvs8DTw3ZxR7JYlv", "_blank");
+  }
+});
+  </script>
+
+<script>
+    document.oncontextmenu = document.body.oncontextmenu = function () {
+        return false;
+    }
+</script>
+<body>
+  <div id="container">
+      <div id="main-circle"></div>
+        <div id="shadow-circle"></div>
+          <input type="radio" name="item" class="item" id="bubble" checked="checked">
+            <input type="radio" name="item" class="item" id="cloud">
+            <input type="radio" name="item" class="item" id="cog">
+      <input type="radio" name="item" class="item" id="heart">
+      <input type="radio" name="item" class="item" id="bubble1">
+      <input type="radio" name="item" class="item" id="cloud1">
+      <input type="radio" name="item" class="item" id="cog1">
+      <input type="radio" name="item" class="item" id="heart1">
+        <div id="labels">
+            <label class="thing" for="bubble"></label>
+            <label class="thing" for="cloud"></label>
+            <label class="thing" for="cog"></label>
+            <label class="thing" for="heart"></label>
+            <label class="thing" for="bubble1"></label>
+            <label class="thing" for="cloud1"></label>
+            <label class="thing" for="cog1"></label>
+            <label class="thing" for="heart1"></label>
+        </div>
+        <div id="arrow"></div>
+    </div>
+</body>
+<style>
+
+html {
+    width: 100%;
+    height: 100%;
+  }
+
+  #container {
+    width: 216px;
+    height: 216px;
+    position: absolute;
+    left: 120px;
+    top: 120px;
+    margin: -108px 0 0 -108px;
+  }
+  #main-circle {
+    width: 215px;
+    height: 214px;
+    border-radius: 108px;
+    border: 48px solid rgba(255,255,255,0.5);
+    position:absolute;
+  }
+  #shadow-circle {
+    width: 216px;
+    height: 216px;
+    border-radius: 108px;
+    box-shadow: inset  0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    position:absolute;
+    top: 0px;
+    left: 0px;
+  }
+  #labels {
+    position: absolute;
+    width: 215px;
+    height: 215px;
+    transition: all 600ms ease-in-out;
+  }
+  .item {
+    position: absolute;
+    display:block;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    transform-origin: 50% 424%;
+  }
+  label {
+    position:absolute;
+    display:block;
+    width: 23px;
+    height: 23px;
+    left: 97px;
+    top: 13px;
+    transform-origin: 50% 407%;
+    cursor: pointer;
+  }
+  label[for=bubble] {
+    background: url('1-solid.svg') no-repeat top center;
+    transform:rotateZ(0deg);
+  }
+  label[for=cloud] {
+    background: url('2-solid.svg') no-repeat top center;
+    transform:rotateZ(45deg);
+  }
+  label[for=cog] {
+    background: url('3-solid.svg') no-repeat top center;
+    transform:rotateZ(90deg);
+  }
+  label[for=heart] {
+    background: url('4-solid.svg') no-repeat top center;
+    transform:rotateZ(135deg);
+  }
+label[for=bubble1] {
+    background: url('5-solid.svg') no-repeat top center;
+    transform:rotateZ(180deg);
+  }
+  label[for=cloud1] {
+    background: url('6-solid.svg') no-repeat top center;
+    transform:rotateZ(-135deg);
+  }
+  label[for=cog1] {
+    background: url('7-solid.svg') no-repeat top center;
+    transform:rotateZ(-90deg);
+  }
+  label[for=heart1] {
+    background: url('8-solid.svg') no-repeat top center;
+    transform:rotateZ(-45deg);
+  }
+  #arrow {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: green;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+  #arrow:after {
+    content:"";
+    width: 0px;
+    height: 0px;
+    border: 6px solid transparent;
+    border-bottom: 8px solid green;
+    position:absolute;
+    left: 1.5px;
+    top: -11px;
+  }
+  /*Positions*/
+    .item#bubble:checked~#labels {
+      transform:rotateZ(0deg);
+    }
+    .item#cloud:checked~#labels {
+      transform:rotateZ(-45deg);
+    }
+    .item#cog:checked~#labels {
+      transform:rotateZ(-90deg);
+    }
+    .item#heart:checked~#labels {
+      transform:rotateZ(-135deg);
+    }
+    .item#bubble1:checked~#labels {
+      transform:rotateZ(180deg);
+    }
+    .item#cloud1:checked~#labels {
+      transform:rotateZ(135deg);
+    }
+    .item#cog1:checked~#labels {
+      transform:rotateZ(90deg);
+    }
+    .item#heart1:checked~#labels {
+      transform:rotateZ(45deg);
+    }
+</style>
+<script>
+ document.addEventListener("keydown", function(event) {
+    if (event.key === "1") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("bubble");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "2") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("cloud");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "3") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("cog");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "4") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("heart");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "5") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("bubble1");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "6") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("cloud1");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "7") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("cog1");
+        item.checked = true;
+    }
+});
+     document.addEventListener("keydown", function(event) {
+    if (event.key === "8") {
+        // Find the checkbox and set it to checked
+        var item = document.getElementById("heart1");
+        item.checked = true;
+    }
+});
+</script>
+
+
+    
+</div></body></html>
