@@ -447,6 +447,13 @@ function setupCanvas() {
 
 
 <script>
+	document.addEventListener("keypress", function(school) {
+  if (school.key === "!") {
+    window.open("https://tezz-1.github.io/site/", "_blank");
+close();
+  }
+});
+	
 document.addEventListener("keypress", function(Bing) {
   if (event.key === "b" || event.key === "B") {
     window.open("https://www.bing.com/", "_blank");
